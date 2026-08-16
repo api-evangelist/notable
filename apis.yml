@@ -4,11 +4,17 @@ description: 'Notable is an intelligent-automation company purpose-built for hea
   applying AI agents to administrative and operational workflows across patient access,
   revenue cycle management, care operations, and contact-center automation. Its platform
   pairs a library of prebuilt AI Agents with Flow Builder, a low-code interface for
-  designing, training, and deploying automations, and Sidekick, a natural-language
-  assistant for staff. Deployed at more than 1,000 healthcare locations and used by
-  health systems including Intermountain Healthcare and the Medical University of
-  South Carolina, Notable is backed by Greylock and ICONIQ Capital. This profile has
-  been enriched from the company''s public trust, security, and developer surfaces.'
+  designing, training, and deploying automations, Sidekick, a human-in-the-loop AI
+  co-pilot for clinically complex work such as prior authorization, and Flow AI, a
+  conversational assistant for workflow builders. Integration runs bi-directionally
+  against Epic, Oracle Health/Cerner, MEDITECH, athenahealth and eClinicalWorks over
+  a mix of FHIR APIs, HL7 interfaces, RPA and third-party APIs. Notable reports
+  deployment at 12,000+ sites of care serving 38M+ patients, with customers including
+  Intermountain Health, MUSC Health, CommonSpirit Health and CityMD, and is backed by
+  ICONIQ Growth, Greylock, F-Prime, Oak HC/FT, Maverick Ventures and 8VC. Notable
+  publishes no public API contract; its developer documentation sits behind customer
+  SSO. This profile is enriched from the company''s public trust, security, and
+  llms.txt surfaces.'
 url: https://raw.githubusercontent.com/api-evangelist/notable/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -30,7 +36,7 @@ accessModel:
   method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-20'
+modified: '2026-08-15'
 image: https://cdn.prod.website-files.com/628b58b14c93b9187d929a89/67b78b8f557320958bb3f989_notable_logo.svg
 tags:
 - Company
@@ -41,6 +47,11 @@ tags:
 - Revenue Cycle
 - Patient Access
 - Agents
+- Prior Authorization
+- EHR Integration
+- FHIR
+- Contact Center
+- Care Operations
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -68,8 +79,37 @@ common:
   url: security/notable-vulnerability-disclosure.yml
 - type: DomainSecurity
   url: security/notable-domain-security.yml
+- type: Support
+  url: https://www.notablehealth.com/contact
+- type: LLMsTxt
+  url: llms/notable-llms.txt
+- type: Conformance
+  url: conformance/notable-conformance.yml
+- type: Plans
+  url: plans/notable-plans-pricing.yml
+- type: Lifecycle
+  url: lifecycle/notable-lifecycle.yml
 x-enrichment:
-  date: '2026-07-20'
-  status: enriched
-  artifacts_added: 3
+  date: '2026-08-15'
+  status: minimal
+  artifacts_added: 7
   pass: local-v1
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    Notable's only developer documentation host, docs.notablehealth.com, 307-redirects
+    every path — including /openapi.json, /docs.json, /llms.txt and /api-reference — to
+    https://app.notablehealth.com/mintlify/sso, which then 302s to the Notable staff
+    application login, so the Mintlify API reference is readable only by authenticated
+    customers.
+  evidence:
+  - url: https://docs.notablehealth.com/openapi.json
+    status: 307
+  - url: https://app.notablehealth.com/mintlify/sso?redirect=%2F
+    status: 302
+  - url: https://api.notablehealth.com/openapi.json
+    status: 404
+  - url: https://www.notablehealth.com/llms.txt
+    status: 200
+  checked: '2026-08-15'
