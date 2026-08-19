@@ -1,0 +1,21 @@
+generated: '2026-08-15'
+method: searched
+source: https://www.notablehealth.com/
+plan_count: 0
+plans: []
+pricing_model: enterprise-contact-sales
+note: >-
+  Notable publishes no pricing. https://www.notablehealth.com/pricing returns HTTP 404
+  (probed 2026-08-15) and no pricing or plans page appears anywhere in
+  https://www.notablehealth.com/sitemap.xml. The provider's own llms.txt states
+  "The primary conversion action across the site is 'Request a demo.'" Commercial
+  engagement runs through https://www.notablehealth.com/request-a-demo (HTTP 200)
+  and a partnership manager. This is an honest zero: enterprise health-system
+  contracting, not undiscovered pricing.
+evidence:
+- url: https://www.notablehealth.com/pricing
+  status: 404
+- url: https://www.notablehealth.com/request-a-demo
+  status: 200
+- url: https://www.notablehealth.com/llms.txt
+  status: 200

@@ -1,0 +1,68 @@
+generated: '2026-08-15'
+method: probed
+source: live GET of /.well-known/* on every Notable host known to this profile
+note: >-
+  Every /.well-known/ path probed returned 404 on every Notable host. No WellKnown
+  or SecurityTxt pointer is emitted in apis.yml, because this file records an
+  ABSENCE, not a served discovery surface. www.notablehealth.com answers
+  /.well-known/* with a 404 HTML page reading "Invalid .well-known request"
+  (Webflow); api.notablehealth.com answers with a generic 404 HTML error page.
+  A separate, real hit was found OUTSIDE /.well-known/ — https://www.notablehealth.com/llms.txt
+  returns HTTP 200 with a genuine 22KB llms.txt (saved to llms/notable-llms.txt).
+hosts:
+- host: https://www.notablehealth.com
+  role: website
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 200
+    file: ../llms/notable-llms.txt
+    note: served from the site root, not /.well-known/
+  - path: /robots.txt
+    status: 200
+    note: sitemap reference only; no AI/agent directives
+- host: https://api.notablehealth.com
+  role: application/API host (redirects / to /staff/app, a customer login)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://trust.notablehealth.com
+  role: trust center (SafeBase)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    note: >-
+      404 body is the SafeBase single-page-app shell (HTTP 404, HTML) — not a
+      security.txt. The Trust Center itself does publish a vulnerability-report
+      mailbox; see security/notable-vulnerability-disclosure.yml.

@@ -1,0 +1,24 @@
+generated: '2026-08-15'
+method: searched
+source: >-
+  https://www.notablehealth.com/llms.txt + full sitemap sweep of
+  www.notablehealth.com + anonymous probes of api.notablehealth.com (2026-08-15)
+limit_count: 0
+limits: []
+response_headers: []
+note: >-
+  No rate limits are published anywhere Notable exposes publicly. There is no public
+  API reference to carry them: docs.notablehealth.com 307-redirects every path to
+  https://app.notablehealth.com/mintlify/sso, a customer SSO login. No X-RateLimit-*,
+  RateLimit-* or Retry-After header was observed on any anonymous response from
+  api.notablehealth.com. This is a recorded absence, not a measured zero-limit API —
+  limits almost certainly exist behind the customer login, we simply cannot read them.
+  Deliberately NO `RateLimits` pointer is wired into apis.yml: the agent-readiness
+  rate_limit_signal check awards points for the presence of that pointer, and awarding
+  them for a file that documents an absence is exactly the silent-zero failure this
+  pipeline is meant to avoid.
+evidence:
+- url: https://docs.notablehealth.com/api-reference
+  status: 307
+- url: https://api.notablehealth.com/sitemap.xml
+  status: 403

@@ -1,0 +1,44 @@
+generated: '2026-08-15'
+method: probed
+source: live DNS/TLS/HTTP probes + sitemap sweep of notablehealth.com (2026-08-15)
+versioning: null
+deprecation: null
+sla: null
+status_page: null
+deprecated_operations: []
+note: >-
+  Notable publishes no public versioning policy, deprecation policy, Sunset/Deprecation
+  header contract, SLA, or changelog. /changelog, /release-notes, /roadmap and /status
+  all return 404 on www.notablehealth.com, and the only documentation host
+  (docs.notablehealth.com) 307-redirects every path to a customer SSO login, so any
+  release notes that exist are customer-only.
+  No `StatusPage` and no `Deprecation` pointer is emitted in apis.yml — neither thing
+  is actually served.
+findings:
+- id: dangling-status-subdomain
+  severity: hygiene
+  summary: >-
+    status.notablehealth.com resolves (CNAME -> thbdk0xh7pdc.stspg-customer.com,
+    Atlassian Statuspage) but is NOT a working Notable status page. The TLS
+    certificate presented is CN=*.statuspage.io with no SAN covering
+    status.notablehealth.com, so HTTPS fails certificate validation for every
+    ordinary client. Forcing the connection insecurely returns Atlassian's own
+    Statuspage marketing page (title "Real-Time Incident Communication with
+    Statuspage | Atlassian"), not a Notable page, and /api/v2/summary.json 302s
+    away. The custom domain is provisioned in DNS but unbound at Statuspage.
+  evidence:
+  - url: https://status.notablehealth.com/
+    status: 0
+    detail: "SSL: no alternative certificate subject name matches target host name 'status.notablehealth.com'"
+  - url: https://status.notablehealth.com/api/v2/summary.json
+    status: 302
+    detail: probed with certificate verification disabled; redirects off the page
+evidence:
+- url: https://www.notablehealth.com/changelog
+  status: 404
+- url: https://www.notablehealth.com/release-notes
+  status: 404
+- url: https://www.notablehealth.com/roadmap
+  status: 404
+- url: https://www.notablehealth.com/status
+  status: 404

@@ -1,11 +1,11 @@
-generated: '2026-07-20'
+generated: '2026-08-15'
 method: probed
 source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
 hosts:
-- host: notablehealth.com
+- host: www.notablehealth.com
   https: true
   tls_version: TLSv1.3
-  cert_expires: Sep 11 00:30:21 2026 GMT
+  cert_expires: Oct 14 13:11:05 2026 GMT
   hsts: false
 domains:
 - domain: notablehealth.com

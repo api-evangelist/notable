@@ -1,18 +1,36 @@
-generated: '2026-07-20'
+generated: '2026-08-15'
 method: searched
 probe: true
 source: https://trust.notablehealth.com/
 url: https://trust.notablehealth.com/
+platform: SafeBase (notablehealth.portals.safebase.io)
 certifications:
 - SOC 2 Type 2
 - ISO/IEC 27001:2022
 - PCI DSS
 - HITRUST
+controls:
+- name: Penetration Testing
+  detail: Penetration tests are conducted on an annual basis.
+  maturity: full
+security_mailbox: security@notablehealth.com
 evidence:
 - source: https://trust.notablehealth.com/
+  status: 200
   keywords:
   - soc 2 type 2
   - iso/iec 27001:2022
   - pci dss
   - hitrust
+  - penetration testing
   - trust center
+- source: https://www.notablehealth.com/security
+  status: 200
+  note: redirects to https://trust.notablehealth.com/
+note: >-
+  Certification strings are recorded verbatim as the Trust Center renders them.
+  The 2026-08-15 run of probe-security-programs.py generalized these to "SOC 2" /
+  "ISO 27001" and dropped HITRUST; the fuller verbatim list was restored per the
+  never-downgrade rule. HIPAA compliance is claimed by Notable on its own site and
+  in its llms.txt but is not a certification badge on the Trust Center, so it is
+  carried in conformance/notable-conformance.yml rather than here.

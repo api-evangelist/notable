@@ -1,0 +1,23 @@
+generated: '2026-08-15'
+method: searched
+source: >-
+  npm registry search, pypi.org/pypi/<name>/json, rubygems.org/api/v1/gems/<name>.json,
+  packagist.org, crates.io/api/v1/crates, azuresearch-usnc.nuget.org/query, and the
+  GitHub organization github.com/notablehealth — all probed 2026-08-15
+package_count: 0
+packages: []
+note: >-
+  No first-party Notable Health client library exists on any public registry.
+  Nothing is published under a notable/notablehealth npm scope; pypi "notablehealth"
+  and "notable-health" 404; rubygems "notablehealth" 404; crates.io and NuGet return
+  zero hits for "notablehealth"; packagist 302s (no vendor namespace).
+  Two same-name packages were checked and REJECTED as unrelated third parties, not
+  recorded as Notable SDKs:
+    - PyPI "notable" 0.4.2 — "A very simple note taking application", John McFarlane,
+      https://github.com/jmcfarlane/Notable
+    - RubyGems "notable" 0.7.0 — "Track notable requests and background jobs",
+      Andrew Kane, https://github.com/ankane/notable
+  github.com/notablehealth has 20 public repositories and every one is internal
+  infrastructure (Terraform modules for AWS/GCP/GitHub, Argo/Temporal/Permify Helm
+  charts). None is a client SDK and none contains an API contract.
+  No `SDKs` pointer is emitted in apis.yml: there is no SDK to point at.
