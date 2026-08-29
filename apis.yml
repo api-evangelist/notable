@@ -16,6 +16,9 @@ description: 'Notable is an intelligent-automation company purpose-built for hea
   SSO. This profile is enriched from the company''s public trust, security, and
   llms.txt surfaces.'
 url: https://raw.githubusercontent.com/api-evangelist/notable/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "Notable publishes no public API contract; its developer documentation sits behind customer SSO."
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
