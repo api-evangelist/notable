@@ -1,0 +1,29 @@
+# Front Door AI Index — notable — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: notable
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.notablehealth.com
+  final_host: www.notablehealth.com
+  ownership: own
+  owner: notable
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 40
+  host_score: 40
+  density: 52.49
+  words: 762
+  tiers:
+    agentic: 9
+    core: 31
+    model: 0
+  ambiguous: 12
+  top_terms:
+    AI: 31
+    agent: 10
+    AI agent: 8
+    automation: 2
+    agentic: 1
