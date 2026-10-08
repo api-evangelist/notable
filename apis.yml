@@ -87,6 +87,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: RateLimits
+  url: rate-limits/notable-rate-limits.yml
 - type: Website
   url: https://www.notablehealth.com/
 - type: Blog
