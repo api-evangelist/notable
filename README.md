@@ -64,6 +64,108 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Notable is a company surfaced as a portfolio company of greylock, iconiq-capital and added to the API Evangelist network as a stub for enrichment. Sector: applications. This profile is a lead awaiting the enrichment pipeline.
+Notable is an intelligent-automation company purpose-built for healthcare, applying AI agents to administrative and operational workflows across patient access, revenue cycle management, care operations, and contact-center automation. Its platform pairs a library of prebuilt AI Agents with Flow Builder, a low-code interface for designing, training, and deploying automations, Sidekick, a human-in-the-loop AI co-pilot for clinically complex work such as prior authorization, and Flow AI, a conversational assistant for workflow builders. Integration runs bi-directionally against Epic, Oracle Health/Cerner, MEDITECH, athenahealth and eClinicalWorks over a mix of FHIR APIs, HL7 interfaces, RPA and third-party APIs. Notable reports deployment at 12,000+ sites of care serving 38M+ patients, with customers including Intermountain Health, MUSC Health, CommonSpirit Health and CityMD, and is backed by ICONIQ Growth, Greylock, F-Prime, Oak HC/FT, Maverick Ventures and 8VC. Notable publishes no public API contract; its developer documentation sits behind customer SSO. This profile is enriched from the company's public trust, security, and llms.txt surfaces.
 
-Backed by: greylock, iconiq-capital — https://notablehealth.com/
+**Areas:** Company · Application · Healthcare · Artificial Intelligence · Automation · Revenue Cycle · Patient Access · Agents · Prior Authorization · EHR Integration · FHIR · Contact Center
+
+## Notable on APIs.io
+
+Everything profiled for Notable is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/notable/](https://apis.io/providers/notable/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [notable](https://apis.io/servers/notable/notable/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Notable Domain Security](https://apis.io/security/notable/notable-domain-security/)
+- [Notable Trust Center](https://apis.io/security/notable/notable-trust-center/)
+- [Notable Vulnerability Disclosure](https://apis.io/security/notable/notable-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Notable Plans Pricing](https://apis.io/plans/notable/notable-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Notable Rate Limits](https://apis.io/rate-limits/notable/notable-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.notablehealth.com/)
+- [Support](https://www.notablehealth.com/contact)
+- [Blog](https://www.notablehealth.com/blog)
+- [Security](https://trust.notablehealth.com/)
+- [Compliance](https://trust.notablehealth.com/)
+- [Terms of service](https://www.notablehealth.com/terms-of-use)
+- [Privacy policy](https://www.notablehealth.com/privacy-policy)
+- [GitHub](https://github.com/notablehealth)
+
+## API Evangelist rating
+
+**Kin Score 20.0** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 58.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 36.8 |
+
+**Agent readiness 14.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 22.1** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/notable/](https://apis.io/providers/notable/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Notable: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/notable/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
